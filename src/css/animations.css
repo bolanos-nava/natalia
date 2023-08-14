@@ -1,0 +1,29 @@
+.animation-up {
+    animation-name: slideup;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+.animation-sideways {
+    animation-name: slide-sideways;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.7s;
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-25px);
+    }
+}
+@keyframes slide-sideways {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}

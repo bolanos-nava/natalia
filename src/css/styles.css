@@ -1,0 +1,64 @@
+.background {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+}
+.black {
+  background-color: #000000;
+  color: #ffffff;
+}
+.pastel-pink {
+  background-color: #edb5dc;
+  color: #000000;
+}
+.add-transitions {
+  transition: transform 1s ease-in-out;
+}
+.transition-slide-up {
+  transform: translateY(-100%);
+}
+.transition-slide-left {
+    transform: translateX(-100%);
+}
+
+.background,
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+#landing-page {
+  font-style: italic;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 700;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 6vh;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate;
+}
+
+.hidden {
+  display: none;
+}
+
+.total-height {
+    height: 100%;
+}

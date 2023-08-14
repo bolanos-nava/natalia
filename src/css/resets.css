@@ -1,0 +1,25 @@
+/* RESETS */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  color: unset;
+  margin: 0;
+  padding: 0;
+  font-family: "Asap", "Open Sans", sans-serif;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+}
+h1 {
+  font-size: 5vh;
+}
