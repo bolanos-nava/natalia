@@ -3,11 +3,13 @@ function advancePage({
         arrowId: "landing-arrow-button",
         containerToHideId: "landing-page-container",
         transitionClassName: "transition-slide-up",
+        oldColor: "black",
     },
     nextPage = {
         containerToShowId: "horizontal-carousel",
         backgroundContainerId: "said-the-king-container",
-        transitionClassName: "transition-slide-up",
+        hiddenPosition: "bottom",
+        newColor: "pastel-pink"
     } }) {
 
     const currentPageElements = {
@@ -19,16 +21,19 @@ function advancePage({
         backgroundContainer: document.getElementById(nextPage.backgroundContainerId),
     }
 
+    const mainContainer = document.getElementById("main-container");
+
     currentPageElements.arrow.addEventListener("click", () => {
         nextPageElements.containerToShow.classList.remove("hidden");
         nextPageElements.backgroundContainer.classList.add("background");
         setTimeout(() => {
             currentPageElements.containerToHide.classList.add(currentPage.transitionClassName);
-            nextPageElements.containerToShow.classList.add(nextPage.transitionClassName);
+            nextPageElements.containerToShow.classList.remove(`hidden-${nextPage.hiddenPosition}`);
+            mainContainer.classList.replace(currentPage.oldColor, nextPage.newColor);
         }, 100);
         setTimeout(() => {
             currentPageElements.containerToHide.classList.add("hidden");
-        }, 1000)
+        }, 2000);
     });
 }
 
@@ -37,11 +42,13 @@ advancePage({
         arrowId: "landing-arrow-button",
         containerToHideId: "landing-page-container",
         transitionClassName: "transition-slide-up",
+        oldColor: "black",
     },
     nextPage: {
         containerToShowId: "horizontal-carousel",
         backgroundContainerId: "said-the-king-container",
-        transitionClassName: "transition-slide-up",
+        hiddenPosition: "bottom",
+        newColor: "pastel-pink"
     }
 });
 
@@ -50,10 +57,12 @@ advancePage({
         arrowId: "said-the-king-arrow",
         containerToHideId: "said-the-king-container",
         transitionClassName: "transition-slide-left",
+        oldColor: "pastel-pink",
     },
     nextPage: {
         containerToShowId: "woman-container",
         backgroundContainerId: "woman-container",
-        transitionClassName: "transition-slide-left",
+        hiddenPosition: "right",
+        newColor: "pastel-blue"
     }
 });

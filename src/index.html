@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/resets.css" />
     <script
       defer
       src="node_modules/@fortawesome/fontawesome-free/js/brands.js"
@@ -29,18 +29,21 @@
     <title>Felices 21 años</title>
   </head>
   <body>
-
-    <div class="black background add-transitions" id="landing-page-container"">
-      <div id="landing-page" class="flex column">
-        <h1>Desliza hacia arriba para empezar</h1>
-        <button class="arrow animation-up" id="landing-arrow-button">
-          <i class="fa-solid fa-circle-arrow-up"></i>
-        </button>
+    <main class="black" id="main-container">
+      <div class="background add-transitions" id="landing-page-container">
+        <div id="landing-page" class="flex column">
+          <h1>Desliza hacia arriba para empezar</h1>
+          <button class="arrow animation-up" id="landing-arrow-button">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="flex row total-height hidden add-transitions" id="horizontal-carousel">
-        <div class="pastel-pink add-transitions" id="said-the-king-container">
+      <div
+        class="flex row total-height hidden hidden-bottom add-transitions"
+        id="horizontal-carousel"
+      >
+        <div class="add-transitions" id="said-the-king-container">
           <div class="flex column" id="said-the-king">
             <div class="lyrics">
               <p>Lover, uncover</p>
@@ -52,32 +55,42 @@
               <p>But we've no time to waste with meddling in affairs</p>
             </div>
             <div class="photocard">
-    
+              <p>Hola</p>
             </div>
-    
-            <button type="button" class="arrow animation-sideways" id="said-the-king-arrow">
-                <i class="fa-solid fa-circle-arrow-right"></i>
+            <button
+              type="button"
+              class="arrow animation-sideways"
+              id="said-the-king-arrow"
+            >
+              <i class="fa-solid fa-circle-arrow-right"></i>
             </button>
           </div>
         </div>
 
-        <div class="pastel-pink hidden add-transitions" id="woman-container" collapsed>
-            <div class="flex column" id="woman">
-                <div class="lyrics">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quod atque sequi corporis blanditiis quidem nihil delectus culpa placeat illo qui ea fugit eaque impedit, nam autem laudantium sapiente. Suscipit.</p>
-                    <p>sit amet consectetur adipisicing elit. </p>
-                    <p>Laboriosam quod atque sequi corporis blanditiis quidem nihil delectus culpa</p>
-                    <p> placeat illo qui ea fugit eaque impedit, nam autem laudantium sapiente. Suscipit.</p>
-                </div>
-                
-                <button type="button" class="arrow animation-sideways" id="woman-arrow">
-                    <i class="fa-solid fa-circle-arrow-right"></i>
-                </button>
+        <div class="hidden hidden-right add-transitions" id="woman-container">
+          <div class="flex column" id="woman">
+            <div class="lyrics">
+              <p>Lover, uncover</p>
+              <p>
+                I know it's warm beneath your sheets and there is ice along the
+                sheets but listen
+              </p>
+              <p>Lover, we will recover</p>
+              <p>But we've no time to waste with meddling in affairs</p>
             </div>
+
+            <div class="photocard"></div>
+
+            <button
+              type="button"
+              class="arrow animation-sideways"
+              id="woman-arrow"
+            >
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
         </div>
-
-    </div>
-
-
+      </div>
+    </main>
   </body>
 </html>

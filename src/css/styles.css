@@ -1,10 +1,18 @@
+main {
+  height: 100%;
+  width: 100%;
+  transition: all 1s ease-in-out;
+}
+
 .background {
+  position: absolute;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  flex-grow: 1;
 }
 .black {
   background-color: #000000;
@@ -14,6 +22,10 @@
   background-color: #edb5dc;
   color: #000000;
 }
+.pastel-blue {
+  background-color: #8793d7;
+  color: #000000;
+}
 .add-transitions {
   transition: transform 1s ease-in-out;
 }
@@ -21,18 +33,7 @@
   transform: translateY(-100%);
 }
 .transition-slide-left {
-    transform: translateX(-100%);
-}
-
-.background,
-.flex {
-  display: flex;
-}
-.row {
-  flex-direction: row;
-}
-.column {
-  flex-direction: column;
+  transform: translateX(-100%);
 }
 
 #landing-page {
@@ -45,6 +46,7 @@
   align-items: center;
 }
 
+/* Arrow buttons in every page */
 .arrow {
   margin-top: 30px;
   color: #ffffff;
@@ -55,10 +57,29 @@
   animation-direction: alternate;
 }
 
-.hidden {
-  display: none;
+/* Arrangement of objects */
+.background,
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
 }
 
+/* Transitions among pages */
+.hidden {
+  display: none;
+  position: absolute;
+}
+.hidden-bottom {
+  transform: translateY(100%);
+}
+.hidden-right {
+  transform: translateX(100%);
+}
 .total-height {
-    height: 100%;
+  height: 100%;
 }
