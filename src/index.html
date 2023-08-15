@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/resets.css" />
+    <link rel="stylesheet" href="css/transitions.css" />
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
     <script
       defer
       src="node_modules/@fortawesome/fontawesome-free/js/brands.js"
@@ -30,22 +33,39 @@
   </head>
   <body>
     <main class="black" id="main-container">
-      <div class="background add-transitions" id="landing-page-container">
-        <div id="landing-page" class="flex column">
+      <section class="background add-transitions" id="landing-page-container">
+        <div id="landing-page" class="landing-page flex column">
           <h1>Desliza hacia arriba para empezar</h1>
           <button class="arrow animation-up" id="landing-arrow-button">
             <i class="fa-solid fa-circle-arrow-up"></i>
           </button>
         </div>
-      </div>
+      </section>
 
-      <div
+      <section
+        class="hidden hidden-bottom add-transitions"
+        id="landing2-page-container"
+      >
+        <div id="landing-page2" class="landing-page flex column">
+          <h1>Esto es por lo que trabajaba hasta tarde</h1>
+          <p>
+            Cuando te decía que no estaba haciendo cosas del trabajo o del
+            curso, era porque en relidad hacía tu regalo, pero no quería
+            decirte.
+          </p>
+          <button class="arrow arrow-up animation-up" id="landing2-arrow-button">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+          </button>
+        </div>
+      </section>
+
+      <section
         class="flex row total-height hidden hidden-bottom add-transitions"
         id="horizontal-carousel"
       >
-        <div class="add-transitions" id="said-the-king-container">
-          <div class="flex column" id="said-the-king">
-            <div class="lyrics">
+        <section class="add-transitions" id="said-the-king-container">
+          <div class="flex column page total-height" id="said-the-king">
+            <div class="lyrics flex column">
               <p>Lover, uncover</p>
               <p>
                 I know it's warm beneath your sheets and there is ice along the
@@ -54,21 +74,67 @@
               <p>Lover, we will recover</p>
               <p>But we've no time to waste with meddling in affairs</p>
             </div>
-            <div class="photocard">
-              <p>Hola</p>
+            <div class="photocard flex column">
+              <div class="carousel">
+                <ul class="carousel__container flex row">
+                  <li class="flex carousel__element" id="king__slide1">
+                    <img
+                      src="assets/images/cangrejo-muerto.jpg"
+                      alt="Cangrejo muerto"
+                    />
+                  </li>
+                  <li class="flex carousel__element" id="king__slide2">
+                    <img src="assets/images/gaviotas1.jpg" alt="Gaviotas" />
+                  </li>
+                  <li class="flex carousel__element" id="king__slide3">
+                    <img src="assets/images/gaviotas2.jpg" alt="Gaviotas" />
+                  </li>
+                </ul>
+                <ul class="carousel__navigation-container">
+                  <li class="carousel__navigation-element">
+                    <a href="#king__slide1" class="carousel__navigation-button"
+                      >1</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a href="#king__slide2" class="carousel__navigation-button"
+                      >2</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a href="#king__slide3" class="carousel__navigation-button"
+                      >3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="photocard-footer">
+                <p class="photocard-footer__caption">
+                  Nos conocimos en Monterrey el 13 de marzo de 2020.<br />
+                  Cuando te conocí en persona todo se sintió igual que cuando
+                  hablábamos por mensaje o por las videollamadas. <br />
+                  No fuimos como dos extraños.
+                </p>
+                <p class="photocard-footer__closure">
+                  “Desde entonces, el pastor y la tejedora sólo pueden verse a ambos extremos de la Vía Láctea, aunque sus corazones estarán siempre el uno junto al otro.”
+                </p>
+              </div>
             </div>
             <button
               type="button"
-              class="arrow animation-sideways"
+              class="arrow arrow-right animation-sideways"
               id="said-the-king-arrow"
             >
               <i class="fa-solid fa-circle-arrow-right"></i>
             </button>
           </div>
-        </div>
+        </section>
 
-        <div class="hidden hidden-right add-transitions" id="woman-container">
-          <div class="flex column" id="woman">
+        <section
+          class="hidden hidden-right add-transitions"
+          id="woman-container"
+        >
+          <div class="flex column page total-height" id="woman">
             <div class="lyrics">
               <p>Lover, uncover</p>
               <p>
@@ -79,18 +145,25 @@
               <p>But we've no time to waste with meddling in affairs</p>
             </div>
 
-            <div class="photocard"></div>
-
+            <div class="photocard">
+              <div class="carousel" id="">
+                <ul class="slides">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                </ul>
+              </div>
+            </div>
             <button
               type="button"
-              class="arrow animation-sideways"
+              class="arrow arrow-right animation-sideways"
               id="woman-arrow"
             >
               <i class="fa-solid fa-circle-arrow-right"></i>
             </button>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
   </body>
 </html>

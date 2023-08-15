@@ -1,0 +1,23 @@
+/* Background and colors */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .black {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .pastel-pink {
+    background-color: #edb5dc;
+    color: #000000;
+  }
+  .pastel-blue {
+    background-color: #8793d7;
+    color: #000000;
+  }

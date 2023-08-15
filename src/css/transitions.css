@@ -1,0 +1,20 @@
+/* Configuring transitions */
+.add-transitions {
+  transition: transform 1s ease-in-out;
+}
+.transition-slide-up {
+  transform: translateY(-100%);
+}
+.transition-slide-left {
+  transform: translateX(-100%);
+}
+.hidden {
+  display: none;
+  position: absolute;
+}
+.hidden-bottom {
+  transform: translateY(100%);
+}
+.hidden-right {
+  transform: translateX(100%);
+}

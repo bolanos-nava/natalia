@@ -45,6 +45,21 @@ advancePage({
         oldColor: "black",
     },
     nextPage: {
+        containerToShowId: "landing2-page-container",
+        backgroundContainerId: "landing2-page-container",
+        hiddenPosition: "bottom",
+        newColor: "black"
+    }
+});
+
+advancePage({
+    currentPage: {
+        arrowId: "landing2-arrow-button",
+        containerToHideId: "landing2-page-container",
+        transitionClassName: "transition-slide-up",
+        oldColor: "black",
+    },
+    nextPage: {
         containerToShowId: "horizontal-carousel",
         backgroundContainerId: "said-the-king-container",
         hiddenPosition: "bottom",
