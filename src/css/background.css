@@ -1,23 +1,51 @@
 /* Background and colors */
+main {
+  --pastel-pink: #edb5dc;
+  --melon: #f2a499;
+  --sunset: #fbd1a2;
+  --pomp-and-power: #946F9B;
+  --pastel-blue: #8793d7;
+  --mimi-pink: #FCDDF2;
+  --caput-mortum: #5e3023;
+  --pinker: #a44f63;
+  --rose-taupe: #7d4e57;
+}
+
 .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-  .black {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  .pastel-pink {
-    background-color: #edb5dc;
-    color: #000000;
-  }
-  .pastel-blue {
-    background-color: #8793d7;
-    color: #000000;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.black {
+  color: #ffffff;
+  background-color: #000000;
+}
+.sunset {
+  color: #000000;
+  background-color: var(--sunset);
+}
+.pomp-and-power {
+  color: #ffffff;
+  background-color: var(--pomp-and-power);
+}
+.melon {
+  color: #000000;
+  background-color: var(--melon);
+}
+.pastel-blue {
+  color: #000000;
+  background-color: var(--pastel-blue);
+}
+.rose-taupe {
+  color: #000000;
+  background-color: var(--rose-taupe);
+}
+.pastel-pink {
+  color: #000000;
+  background-color: var(--pastel-pink);
+}

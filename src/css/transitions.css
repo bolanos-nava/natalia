@@ -1,6 +1,6 @@
 /* Configuring transitions */
 .add-transitions {
-  transition: transform 1s ease-in-out;
+  transition: transform var(--transition-time) ease-in-out;
 }
 .transition-slide-up {
   transform: translateY(-100%);

@@ -32,16 +32,23 @@
     <title>Felices 21 años</title>
   </head>
   <body>
+    <!-- main is the main container for all the pages. It is the one that will change background color -->
     <main class="black" id="main-container">
-      <section class="background add-transitions" id="landing-page-container">
-        <div id="landing-page" class="landing-page flex column">
-          <h1>Desliza hacia arriba para empezar</h1>
+      <!-- Each section represents a flex container that we are going to slide, be it up or sideways -->
+      <!-- The background class styles the container with absolute positioning to be able to put it on the 0,0 coordinate -->
+      <section
+        class="hdden add-transitions background"
+        id="landing-page-container"
+      >
+        <div id="landing-page" class="flex column landing-page">
+          <h1>Toca la flecha para empezar</h1>
           <button class="arrow animation-up" id="landing-arrow-button">
             <i class="fa-solid fa-circle-arrow-up"></i>
           </button>
         </div>
       </section>
 
+      <!-- The class "hidden" adds display: none properties to the elements we want to hide for later sliding into view. The class hidden-"some direction" moves the element 100% in X or Y direction, so it hides outside of the viewport -->
       <section
         class="hidden hidden-bottom add-transitions"
         id="landing2-page-container"
@@ -50,21 +57,28 @@
           <h1>Esto es por lo que trabajaba hasta tarde</h1>
           <p>
             Cuando te decía que no estaba haciendo cosas del trabajo o del
-            curso, era porque en relidad hacía tu regalo, pero no quería
-            decirte.
+            curso, era porque en relidad hacía tu regalo pero no quería decirte.
+            Quería que fuera sorpresa.
           </p>
-          <button class="arrow arrow-up animation-up" id="landing2-arrow-button">
+          <button
+            class="arrow arrow-up animation-up"
+            id="landing2-arrow-button"
+          >
             <i class="fa-solid fa-circle-arrow-up"></i>
           </button>
         </div>
       </section>
 
+      <!-- This section represents a horizontal flex container that is a "carousel" of pages- It's important to set the total-height class here so the flex container takes up the height of the body -->
       <section
-        class="flex row total-height hidden hidden-bottom add-transitions"
+        class="hidden hidden-bottom flex row total-height add-transitions"
         id="horizontal-carousel"
       >
-        <section class="add-transitions" id="said-the-king-container">
-          <div class="flex column page total-height" id="said-the-king">
+        <!-- Each section inside the #horizontal-carousel section represents a page -->
+        <!-- Important to set .add-transitions for the transitions when we change page -->
+        <section class="hdden add-transitions" id="said-the-king-container">
+          <!-- Important to set .total-height so this inner div that contains the elements of the page covers the whole page -->
+          <div class="page flex column total-height" id="said-the-king">
             <div class="lyrics flex column">
               <p>Lover, uncover</p>
               <p>
@@ -116,10 +130,13 @@
                   No fuimos como dos extraños.
                 </p>
                 <p class="photocard-footer__closure">
-                  “Desde entonces, el pastor y la tejedora sólo pueden verse a ambos extremos de la Vía Láctea, aunque sus corazones estarán siempre el uno junto al otro.”
+                  “Desde entonces, el pastor y la tejedora sólo pueden verse a
+                  ambos extremos de la Vía Láctea, aunque sus corazones estarán
+                  siempre el uno junto al otro.”
                 </p>
               </div>
             </div>
+
             <button
               type="button"
               class="arrow arrow-right animation-sideways"
@@ -134,30 +151,289 @@
           class="hidden hidden-right add-transitions"
           id="woman-container"
         >
-          <div class="flex column page total-height" id="woman">
-            <div class="lyrics">
-              <p>Lover, uncover</p>
-              <p>
-                I know it's warm beneath your sheets and there is ice along the
-                sheets but listen
-              </p>
-              <p>Lover, we will recover</p>
-              <p>But we've no time to waste with meddling in affairs</p>
+          <div class="page flex column total-height" id="woman">
+            <div class="lyrics flex column">
+              <p>It's an honest thing when there's no one there</p>
+              <p>Some days they feel like dress rehearsals</p>
+              <p>Some days I watch and you don't care</p>
             </div>
 
-            <div class="photocard">
-              <div class="carousel" id="">
-                <ul class="slides">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
+            <div class="photocard flex column">
+              <div class="carousel">
+                <ul class="carousel__container flex row">
+                  <li class="flex carousel__element" id="woman__slide1">
+                    <img
+                      src="assets/images/cangrejo-muerto.jpg"
+                      alt="Cangrejo muerto"
+                    />
+                  </li>
+                  <li class="flex carousel__element" id="woman__slide2">
+                    <img src="assets/images/gaviotas1.jpg" alt="Gaviotas" />
+                  </li>
+                  <li class="flex carousel__element" id="woman__slide3">
+                    <img src="assets/images/gaviotas2.jpg" alt="Gaviotas" />
+                  </li>
+                </ul>
+                <ul class="carousel__navigation-container">
+                  <li class="carousel__navigation-element">
+                    <a href="#woman__slide1" class="carousel__navigation-button"
+                      >1</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a href="#woman__slide2" class="carousel__navigation-button"
+                      >2</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a href="#woman__slide3" class="carousel__navigation-button"
+                      >3</a
+                    >
+                  </li>
                 </ul>
               </div>
+              <div class="photocard-footer">
+                <p class="photocard-footer__caption">
+                  Cada vez que nos veíamos era por largo tiempo. Nos conocíamos
+                  más, pasando todo el día juntos. Nunca fuimos disonantes.
+                </p>
+                <p class="photocard-footer__closure">
+                  “All the motions of ordinary love”
+                </p>
+              </div>
             </div>
+
             <button
               type="button"
               class="arrow arrow-right animation-sideways"
               id="woman-arrow"
+            >
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section
+          class="hidden hidden-right add-transitions"
+          id="restflow-container"
+        >
+          <div class="page flex column total-height" id="restflow">
+            <div class="lyrics flex column">
+              <p>Then out of darkness I found I could still feel</p>
+              <p>Something good</p>
+              <p>Out of the woods</p>
+            </div>
+
+            <div class="photocard flex column">
+              <div class="carousel">
+                <ul class="carousel__container flex row">
+                  <li class="flex carousel__element" id="restflow__slide1">
+                    <img
+                      src="assets/images/cangrejo-muerto.jpg"
+                      alt="Cangrejo muerto"
+                    />
+                  </li>
+                  <li class="flex carousel__element" id="restflow__slide2">
+                    <img src="assets/images/gaviotas1.jpg" alt="Gaviotas" />
+                  </li>
+                  <li class="flex carousel__element" id="restflow__slide3">
+                    <img src="assets/images/gaviotas2.jpg" alt="Gaviotas" />
+                  </li>
+                </ul>
+                <ul class="carousel__navigation-container">
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#restflow__slide1"
+                      class="carousel__navigation-button"
+                      >1</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#restflow__slide2"
+                      class="carousel__navigation-button"
+                      >2</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#restflow__slide3"
+                      class="carousel__navigation-button"
+                      >3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="photocard-footer">
+                <p class="photocard-footer__caption">
+                  Me enamoré pronto de ti y no hube pensado en que podría ser un
+                  error; por la distancia, por la incertidumbre de saber si una
+                  relación en una situacion inusual como esa que recién
+                  empezábamos, funcionaría. Me dejé llevar y fue la mejor
+                  decisión que pude tomar.
+                </p>
+                <p class="photocard-footer__closure">
+                  “All of the rest will flow”
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="arrow arrow-right animation-sideways"
+              id="restflow-arrow"
+            >
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section
+          class="hidden hidden-right add-transitions"
+          id="spiritualized-container"
+        >
+          <div class="page flex column total-height" id="spiritualized">
+            <div class="lyrics flex column">
+              <p>All I want in life's a little bit of love</p>
+              <p>To take the pain away</p>
+              <p>Getting strong today</p>
+              <p>A giant step each day</p>
+            </div>
+
+            <div class="photocard flex column">
+              <div class="carousel">
+                <ul class="carousel__container flex row">
+                  <li class="flex carousel__element" id="spiritualized__slide1">
+                    <img
+                      src="assets/images/cangrejo-muerto.jpg"
+                      alt="Cangrejo muerto"
+                    />
+                  </li>
+                  <li class="flex carousel__element" id="spiritualized__slide2">
+                    <img src="assets/images/gaviotas1.jpg" alt="Gaviotas" />
+                  </li>
+                  <li class="flex carousel__element" id="spiritualized__slide3">
+                    <img src="assets/images/gaviotas2.jpg" alt="Gaviotas" />
+                  </li>
+                </ul>
+                <ul class="carousel__navigation-container">
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#spiritualized__slide1"
+                      class="carousel__navigation-button"
+                      >1</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#spiritualized__slide2"
+                      class="carousel__navigation-button"
+                      >2</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#spiritualized__slide3"
+                      class="carousel__navigation-button"
+                      >3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="photocard-footer">
+                <p class="photocard-footer__caption">
+                  Me enamoré pronto de ti y no hube pensado en que podría ser un
+                  error; por la distancia, por la incertidumbre de saber si una
+                  relación en una situacion inusual como esa que recién
+                  empezábamos, funcionaría. Me dejé llevar y fue la mejor
+                  decisión que pude tomar.
+                </p>
+                <p class="photocard-footer__closure">
+                  “And I don't know where we are all going to <strong>we'll float in space, just you and I</strong>”
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="arrow arrow-right animation-sideways"
+              id="spiritualized-arrow"
+            >
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section
+          class="hidden hidden-right add-transitions"
+          id="mellotron-container"
+        >
+          <div class="page flex column total-height" id="mellotron">
+            <div class="lyrics flex column">
+              <p>All I want in life's a little bit of love</p>
+              <p>To take the pain away</p>
+              <p>Getting strong today</p>
+              <p>A giant step each day</p>
+            </div>
+
+            <div class="photocard flex column">
+              <div class="carousel">
+                <ul class="carousel__container flex row">
+                  <li class="flex carousel__element" id="mellotron__slide1">
+                    <img
+                      src="assets/images/cangrejo-muerto.jpg"
+                      alt="Cangrejo muerto"
+                    />
+                  </li>
+                  <li class="flex carousel__element" id="mellotron__slide2">
+                    <img src="assets/images/gaviotas1.jpg" alt="Gaviotas" />
+                  </li>
+                  <li class="flex carousel__element" id="mellotron__slide3">
+                    <img src="assets/images/gaviotas2.jpg" alt="Gaviotas" />
+                  </li>
+                </ul>
+                <ul class="carousel__navigation-container">
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#mellotron__slide1"
+                      class="carousel__navigation-button"
+                      >1</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#mellotron__slide2"
+                      class="carousel__navigation-button"
+                      >2</a
+                    >
+                  </li>
+                  <li class="carousel__navigation-element">
+                    <a
+                      href="#mellotron__slide3"
+                      class="carousel__navigation-button"
+                      >3</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="photocard-footer">
+                <p class="photocard-footer__caption">
+                  Me enamoré pronto de ti y no hube pensado en que podría ser un
+                  error; por la distancia, por la incertidumbre de saber si una
+                  relación en una situacion inusual como esa que recién
+                  empezábamos, funcionaría. Me dejé llevar y fue la mejor
+                  decisión que pude tomar.
+                </p>
+                <p class="photocard-footer__closure">
+                  “And I don't know where we are all going to <strong>we'll float in space, just you and I</strong>”
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="arrow arrow-right animation-sideways"
+              id="mellotron-arrow"
             >
               <i class="fa-solid fa-circle-arrow-right"></i>
             </button>

@@ -33,7 +33,7 @@ function advancePage({
         }, 100);
         setTimeout(() => {
             currentPageElements.containerToHide.classList.add("hidden");
-        }, 2000);
+        }, 500);
     });
 }
 
@@ -63,7 +63,7 @@ advancePage({
         containerToShowId: "horizontal-carousel",
         backgroundContainerId: "said-the-king-container",
         hiddenPosition: "bottom",
-        newColor: "pastel-pink"
+        newColor: "sunset"
     }
 });
 
@@ -72,12 +72,57 @@ advancePage({
         arrowId: "said-the-king-arrow",
         containerToHideId: "said-the-king-container",
         transitionClassName: "transition-slide-left",
-        oldColor: "pastel-pink",
+        oldColor: "sunset",
     },
     nextPage: {
         containerToShowId: "woman-container",
         backgroundContainerId: "woman-container",
         hiddenPosition: "right",
+        newColor: "pomp-and-power"
+    }
+});
+
+advancePage({
+    currentPage: {
+        arrowId: "woman-arrow",
+        containerToHideId: "woman-container",
+        transitionClassName: "transition-slide-left",
+        oldColor: "pomp-and-power",
+    },
+    nextPage: {
+        containerToShowId: "restflow-container",
+        backgroundContainerId: "restflow-container",
+        hiddenPosition: "right",
+        newColor: "melon"
+    }
+});
+
+advancePage({
+    currentPage: {
+        arrowId: "restflow-arrow",
+        containerToHideId: "restflow-container",
+        transitionClassName: "transition-slide-left",
+        oldColor: "melon",
+    },
+    nextPage: {
+        containerToShowId: "spiritualized-container",
+        backgroundContainerId: "spiritualized-container",
+        hiddenPosition: "right",
         newColor: "pastel-blue"
+    }
+});
+
+advancePage({
+    currentPage: {
+        arrowId: "spiritualized-arrow",
+        containerToHideId: "spiritualized-container",
+        transitionClassName: "transition-slide-left",
+        oldColor: "pastel-blue",
+    },
+    nextPage: {
+        containerToShowId: "mellotron-container",
+        backgroundContainerId: "mellotron-container",
+        hiddenPosition: "right",
+        newColor: "rose-taupe"
     }
 });

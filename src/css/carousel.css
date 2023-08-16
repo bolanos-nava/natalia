@@ -1,11 +1,11 @@
 .carousel {
-  height: 50%;
+  /* height: 50%; */
+  width: 100%;
   box-sizing: border-box;
 }
 
 .carousel__container {
   overflow-x: scroll;
-  height: 100%;
   column-gap: 20px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -32,6 +32,7 @@ img {
 
 .carousel__navigation-container {
   text-align: center;
+  margin-top: 6px;
 }
 .carousel__navigation-element {
   display: inline-flex;
@@ -41,8 +42,6 @@ img {
   height: 1.5rem;
   background: rgb(165, 202, 255);
   border-radius: 50%;
-  margin: 0 0 0.5rem 0;
-  /* position: relative; */
 }
 .carousel__navigation-button {
   text-decoration: none;
