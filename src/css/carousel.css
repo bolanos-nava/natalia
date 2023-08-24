@@ -20,7 +20,6 @@
   background-color: rgba(255, 255, 255, 0);
   justify-content: center;
   align-items: center;
-  font-size: 50px;
 }
 
 img {
@@ -32,7 +31,7 @@ img {
 
 .carousel__navigation-container {
   text-align: center;
-  margin-top: 6px;
+  margin-top: -2px;
 }
 .carousel__navigation-element {
   display: inline-flex;
@@ -46,9 +45,10 @@ img {
 .carousel__navigation-button {
   text-decoration: none;
 }
+.carousel__navigation-button:link,
+.carousel__navigation-button:visited {
+  color: rgb(0, 0, 0);
+}
 .carousel__navigation-button:active {
   top: 1px;
-}
-.carousel__navigation-button:focus {
-  background: #000;
 }

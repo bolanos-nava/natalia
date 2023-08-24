@@ -126,3 +126,18 @@ advancePage({
         newColor: "rose-taupe"
     }
 });
+
+advancePage({
+    currentPage: {
+        arrowId: "mellotron-arrow",
+        containerToHideId: "mellotron-container",
+        transitionClassName: "transition-slide-left",
+        oldColor: "rose-taupe",
+    },
+    nextPage: {
+        containerToShowId: "iambic-container",
+        backgroundContainerId: "iambic-container",
+        hiddenPosition: "right",
+        newColor: "pastel-pink"
+    }
+});
