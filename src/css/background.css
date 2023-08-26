@@ -30,7 +30,7 @@ main {
   background-color: var(--sunset);
 }
 .pomp-and-power {
-  color: #ffffff;
+  color: #dfdfdf;
   background-color: var(--pomp-and-power);
 }
 .melon {
@@ -38,14 +38,14 @@ main {
   background-color: var(--melon);
 }
 .pastel-blue {
-  color: #000000;
+  color: #dfdfdf;
   background-color: var(--pastel-blue);
 }
 .rose-taupe {
-  color: #000000;
+  color: #dfdfdf;
   background-color: var(--rose-taupe);
 }
 .pastel-pink {
-  color: #000000;
+  color: #dfdfdf;
   background-color: var(--pastel-pink);
 }

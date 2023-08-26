@@ -4,6 +4,13 @@ main {
   width: 100%;
   transition: all var(--transition-time) ease-in-out;
 }
+blockquote {
+  text-align: center;
+  font-weight: 700;
+  font-size: large;
+  margin: 0;
+  padding: 0
+}
 
 .landing-page {
   font-style: italic;
@@ -33,7 +40,7 @@ main {
 }
 .page {
   justify-content: space-between;
-  max-width: 500px;
+  max-width: 600px;
   row-gap: 10px;
 }
 .page > * {
@@ -42,7 +49,6 @@ main {
 .total-height {
   height: 100%;
 }
-
 
 .lyrics {
   text-align: center;
@@ -55,8 +61,6 @@ main {
   margin-top: 15px;
 }
 .photocard {
-  display: flex;
-  flex-flow: column;
   flex: 1 1 70%;
   row-gap: 10px;
   max-height: 70%;
@@ -71,9 +75,14 @@ main {
   overflow-y: scroll;
   scroll-behavior: smooth;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
   border-radius: 8px;
   box-shadow: inset 0px -2px 18px -2px rgba(0, 0, 0, 0.343);
+}
+.sunset .photocard-footer,
+.melon .photocard-footer {
+  font-weight: 500;
 }
 .photocard-footer__caption {
   text-align: left;
@@ -104,8 +113,9 @@ main {
   cursor: pointer;
 }
 
-.dialogue__container, .dialogue__line {
-  list-style: '- ' inside;
+.dialogue__container,
+.dialogue__line {
+  list-style: "- " inside;
 }
 .dialogue__container {
   margin: 5px 10px;
@@ -116,5 +126,12 @@ main {
 }
 .multiple-paragraphs > p {
   text-indent: 12pt;
+}
 
+#iambic {
+  justify-content: center;
+  align-items: center;
+}
+#iambic__photocard {
+  max-height: 90%;
 }
