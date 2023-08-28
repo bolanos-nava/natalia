@@ -1,5 +1,5 @@
 main {
-  --transition-time: 0.2s;
+  --transition-time: 0.7s;
   height: 100%;
   width: 100%;
   transition: all var(--transition-time) ease-in-out;
