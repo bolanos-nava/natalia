@@ -30,10 +30,10 @@ function advancePage({
             currentPageElements.containerToHide.classList.add(currentPage.transitionClassName);
             nextPageElements.containerToShow.classList.remove(`hidden-${nextPage.hiddenPosition}`);
             mainContainer.classList.replace(currentPage.oldColor, nextPage.newColor);
-        }, 100);
+        }, 300);
         setTimeout(() => {
             currentPageElements.containerToHide.classList.add("hidden");
-        }, 500);
+        }, 1000);
     });
 }
 
