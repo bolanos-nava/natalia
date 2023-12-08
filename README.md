@@ -1,2 +1,3 @@
-# natalia
-Te amo mi amor, espero que te guste esto que voy a hacer para ti
+# Natalia
+
+Little art project for my girlfriend | programmed with vanilla HTML, CSS and JS to add dynamism and transitions among pages.
